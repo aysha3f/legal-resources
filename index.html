@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,15 @@
       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
       <script src="https://cdn.tailwindcss.com"></script>
       
-      <!-- Popping- google-font -->
+      <!-- - google-font -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- icons cnd -->
+      <script src="https://kit.fontawesome.com/34a6b2a980.js" crossorigin="anonymous"></script>
       <style>
-          .font-poppins{
-           font-family: "Poppins", serif;
-          }
+         .font-garamond{
+         font-family: "EB Garamond", serif; }
       </style>
       <script>
         tailwind.config = {
@@ -23,21 +24,168 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                'legal-primary': '#B68C5A ',
             }
             }
           }
         }
       </script>
 </head>
-<body>
-   <header>
+<body class="font-garamond">
+   <header class="md:container mx-auto">
+  
+  <!-- Navbar -->
+  <nav class="navbar  ">
+    <!-- Left side (logo + mobile menu toggle) -->
+    <div class="navbar-start">
+      <!-- Mobile menu button (hamburger) -->
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost  lg:hidden">
+          <!-- Icon for the hamburger -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
+        <!-- Mobile dropdown menu -->
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li><a>Home</a></li>
+          <li><a>Services</a></li>
+          <li><a>Cases </a></li>
+          <li><a>Blog </a></li>
+          <li><a>Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Logo/Brand -->
+      <a class="flex items-center ">  <img  class="p-4 rounded-md  "
+        src="images/logo2.png"
+        alt="Logo" 
+       /> </a>
+    </div>
+  
+    <!-- Center (links for larger screens) -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Home</a></li>
+        <li><a>Services <i class="fa-solid fa-angle-right"></i></a></li>
+        <li><a>Cases <i class="fa-solid fa-angle-right"></i></a></li>
+        <li><a>Blog <i class="fa-solid fa-angle-right"></i></a></li>
+        <li><a>Contact Us <i class="fa-solid fa-angle-right"></i></a></li>
+      </ul>
+    </div>
+  
+    <!-- Right side (button) -->
+    <div class="navbar-end">
+      <!-- Example gold-ish color for the button -->
+      <button class="btn border-0 bg-[#D4A373] hover:bg-[#b88a62] text-white border-none">
+        Free Consultation
+      </button>
+    </div>
+  </nav>
+     <!-- Hero Section -->
+  <div 
+  class="hero mt-10 lg:w-[1170px] lg:h-[500px] bg-cover bg-center" 
+  style="background-image: url('images/banner.png');"
+>
+  <!-- Optional overlay to darken the background image -->
+  <div class="hero-overlay bg-black bg-opacity-60"></div>
 
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-4xl md:text-5xl font-bold">
+        We Provide Effective Legal Solutions
+      </h1>
+      <p class="mb-5">
+        There are many variations of passages of Lorem Ipsum available, but
+        the majority have suffered alteration in some form, by injected humour.
+      </p>
+      
+      <!-- Search Input -->
+      <div class="form-control ">
+        <div class="input-group flex gap-1">
+          <input 
+            type="text" 
+            placeholder="Search your services" 
+            class="input input-bordered w-full"
+          />
+          <button class="btn bg-legal-primary text-white">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
    </header> 
-   <main>
-
+   <main class="md:container mx-auto">
+   <section class="py-16">
+<div class="max-w-4xl mx-auto text-center">
+  <h2 class="text-3xl font-bold text-gray-800">The Legal Practice Area</h2>
+  <p class="mt-2 text-gray-600">
+    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+  </p>
+</div>
+<!-- grid layout -->
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-1 max-w-5xl mx-auto mt-10  ;">
+  <!-- card-1 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center box-border shadow-md border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/business.png" alt="">
+    <h2 class="text-2xl font-semibold">Business Law</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+  <!-- card-2 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center box-border shadow-md border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/criminal.png" alt="">
+    <h2 class="text-2xl font-semibold">Criminal Law</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+  <!-- card-3 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center  box-border shadow-md border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/child.png" alt="">
+    <h2 class="text-2xl font-semibold">Child Support</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+  <!-- card-4 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center box-border shadow-md border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/education.png" alt="">
+    <h2 class="text-2xl font-semibold">Education Law</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+  <!-- card-5 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center box-border shadow-md  border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/divorce.png" alt="">
+    <h2 class="text-2xl font-semibold">Divorce Law</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+  <!-- card-6 -->
+   <div class="`border border-gray-200  mt-10 p-8 text-center box-border shadow-md border-b-2 2px solid rgb(231, 231, 231) bg-linear-gradient 180.00deg, rgb(243, 243, 243),rgba(243, 243, 243, 0) 100%">
+    <img class="m-auto" src="images/tax.png" alt="">
+    <h2 class="text-2xl font-semibold">Tax Law</h2>
+    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+    <img class="m-auto" src="images/Frame.png" alt="">
+   </div>
+ </div>
+   </section>
+  
    </main>
    <footer>
-    
+
    </footer>
 </body>
 </html>
